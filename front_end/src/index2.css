@@ -9,65 +9,70 @@ header__link--small
 item-list__header
 nomes compostos são separados po -
 componentes recebem " props "
+puxando array
+{Array(items)
+          .fill()
+          .map((currentValue, index) => {
+            return <SingleItem key={`${title}-${index}`} />;
+          })}
+            spred operator ...
+            
 */
 
-
-#root{
-    height:100svh ;
-    display: flex;
-    flex-direction: column;
+#root {
+  height: 100svh;
+  display: flex;
+  flex-direction: column;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: black;
-    color: white;
-    font-family: Helvetica, sans-serif;
-    
+  background-color: black;
+  color: white;
+  font-family: Helvetica, sans-serif;
 }
 
-a{
-    color: inherit;
-    font-family:inherit ;
-    text-decoration: none;
+a {
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
 }
 
-.header__link{
-    text-decoration: none;   
+.header__link {
+  text-decoration: none;
 }
-.header__link:hover{
-    color:grey;
+.header__link:hover {
+  color: grey;
 }
 
 /*Header*/
-.header{
-    padding: 10px 20px;
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-
+.header {
+  padding: 10px 20px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
 }
 
 /*Main*/
 
-.main{
-    background-color: blueviolet;
-    padding: 20px;
-    margin: 0 10px 10px;
-    border-radius: 15px;
-    flex: 1;
-    background-image: linear-gradient(to bottom , #330066,black);
+.main {
+  background-color: blueviolet;
+  padding: 20px;
+  margin: 0 10px 10px;
+  border-radius: 15px;
+  flex: 1;
+  background-image: linear-gradient(to bottom, #330066, black);
 }
-.main__text{
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
+.main__text {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
 }
 
-.main__link:hover{
-    color:grey;
+.main__link:hover {
+  color: grey;
 }
