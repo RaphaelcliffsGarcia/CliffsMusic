@@ -1,13 +1,28 @@
 import React from "react";
 import ItemList from "./ItemList";
+import { artistArray } from "../assets/database/artists";
+import { songsArray } from "../assets/database/songs";
 
 const Main = () => {
   return (
     <div className="main">
-      {/* Item list de Artistas */}
-      <ItemList title="Artistas Populares" items={5} />
-      {/* Item list de Músicas  */}
-      <ItemList title="Músicas Populares" items={10} />
+      {/* Item List de Artistas */}
+      <ItemList
+        title="Artistas"
+        items={10}
+        itemsArray={artistArray}
+        path="/artists"
+        idPath="/artist"
+      />
+
+      {/* Item List de Músicas */}
+      <ItemList
+        title="Músicas"
+        items={20}
+        itemsArray={songsArray}
+        path="/songs"
+        idPath="/song"
+      />
     </div>
   );
 };
